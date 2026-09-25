@@ -11,9 +11,11 @@ collapsed. **13:05 at 1×.**
 **Status: COMPLETE, 23 September 2026. Approved by Eric. Ready to embed or package.**
 Do not change the build files listed in `CHECKSUMS.sha256` without a new decision
 from Eric; any change should be verified with both checks and the manifest regenerated.
-Nothing here is deployed. Nothing here touches the live presentation
-(`sandiapresentation` Worker) or the Graystone website. It will live on a dedicated
-talks page (decided, not yet built).
+Deployed 25 September 2026 to its own Cloudflare Worker, `sandiaautomated`, at
+https://sandiaautomated.eric-c-gladstone.workers.dev. Build files are also on GitHub at
+`ericcgladstone-maker/sandia-automated-presentation`. Nothing here touches the live
+presentation (`sandiapresentation` Worker) or the Graystone website, both unchanged. The
+dedicated talks page is still decided but not yet built.
 
 ### To embed
 
