@@ -8,9 +8,17 @@ A self-running web version of the 15-minute talk. The real v13 deck plays in a
 is shown one paragraph at a time. The complete spoken text is available below,
 collapsed. **13:05 at 1×.**
 
-**Status: COMPLETE, 23 September 2026. Approved by Eric. Ready to embed or package.**
+**Status: COMPLETE and LIVE.** Build complete 23 September 2026, approved by Eric.
+Pushed live 25 September 2026.
+
+- **Live:** https://sandiaautomated.eric-c-gladstone.workers.dev
+- **Repo:** https://github.com/ericcgladstone-maker/sandia-automated-presentation
+
 Do not change the build files listed in `CHECKSUMS.sha256` without a new decision
 from Eric; any change should be verified with both checks and the manifest regenerated.
+A change to the build files means redeploying the Worker and pushing the repo, or the
+three copies drift apart.
+
 Deployed 25 September 2026 to its own Cloudflare Worker, `sandiaautomated`, at
 https://sandiaautomated.eric-c-gladstone.workers.dev. Build files are also on GitHub at
 `ericcgladstone-maker/sandia-automated-presentation`. Nothing here touches the live
