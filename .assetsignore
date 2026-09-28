@@ -3,3 +3,5 @@ wrangler.toml
 CHECKSUMS.sha256
 README.md
 PROSE.md
+.git
+.gitignore
