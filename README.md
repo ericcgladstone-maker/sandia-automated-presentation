@@ -15,15 +15,17 @@ Pushed live 25 September 2026.
 - **Repo:** https://github.com/ericcgladstone-maker/sandia-automated-presentation
 
 Do not change the build files listed in `CHECKSUMS.sha256` without a new decision
-from Eric; any change should be verified with both checks and the manifest regenerated.
-A change to the build files means redeploying the Worker and pushing the repo, or the
-three copies drift apart.
+from Eric (the last: 5 October 2026, one navigation sequence in `player.js` and `index.html`; deck, prose and timeline untouched); any change should be verified with both checks and the manifest regenerated.
+A change to the build files means redeploying the Worker, pushing the repo, and re-copying
+into Graystone, or the four copies drift apart.
 
 Deployed 25 September 2026 to its own Cloudflare Worker, `sandiaautomated`, at
 https://sandiaautomated.eric-c-gladstone.workers.dev. Build files are also on GitHub at
 `ericcgladstone-maker/sandia-automated-presentation`. Nothing here touches the live
-presentation (`sandiapresentation` Worker) or the Graystone website, both unchanged. The
-dedicated talks page is still decided but not yet built.
+presentation (`sandiapresentation` Worker). The
+Graystone Talks page went live the same day at https://graystoneindustries.co/talks/, with a
+byte-identical copy of the player in `site/public/talks/ai-credibility/`. A change to the build files
+now has four copies to update: this folder, the Worker, the GitHub repo, and Graystone.
 
 ### To embed
 
@@ -74,13 +76,16 @@ where the preceding spoken text ends. Edit any `m:ss` in `PROSE.md` to adjust.
 
 - **Watch.** Nothing plays until Play is pressed. Speed (0.75× to 1.5×) changes how
   long each page is held, not the deck's own animations.
-- **Move around.** ‹ › beside Play change page. The page menu and Restart sit in a
+- **Move around.** ‹ › beside Play (and the arrow keys) step one passage at a time,
+  through the talk as a single sequence: within a page they move the spoken text,
+  and past a page's last passage they turn to the next page (‹ past the first returns
+  to the previous page's last passage). Since 5 October 2026 there are no separate
+  passage arrows; "n / m" beside the passage only shows the position. Stepping pauses
+  playback and Play resumes from that passage. The page menu and Restart sit in a
   quieter row below. Clicking or keying inside the deck works as in the live talk,
   and the player follows and pauses.
-- **Read along.** The column beside the deck shows only the current passage. On
-  pages with several passages, ‹ n / m › steps among them without changing the
-  deck. Stepping pauses playback and Play resumes from that passage. "Full spoken
-  text" opens the whole talk, and clicking any paragraph jumps there.
+- **Read along.** The column beside the deck shows only the current passage. "Full
+  spoken text" opens the whole talk, and clicking any paragraph jumps there.
 
 ## How it works
 
