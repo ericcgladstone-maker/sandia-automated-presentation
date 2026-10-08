@@ -17,20 +17,20 @@ The prose below is final (supplied 2026-09-22; opening stutter note removed at E
 
 ---
 
-## 01 · opening · 1:43
-My background is in social networks and collective behavior. I’m a behavioral scientist and network researcher, and much of my recent work has involved translating those tools into controlled experiments with interacting AI systems. I think of credibility as an evidentiary construct. It is built from multiple kinds of evidence, and what matters depends on the task, the operating conditions, and when and where a system is being used. So I do not think of credibility as a permanent property of a model. The relevant question is what evidence supports relying on this system for this use, under these conditions.
+## 01 · opening · 1:38
+My background is in social networks and collective behavior. I am a behavioral scientist and network researcher, and much of my recent work has involved controlled experiments with interacting AI systems. I think of credibility as an evidentiary construct. The question is what evidence supports relying on a particular system for a particular task, under particular operating conditions. Credibility cannot be inferred from model identity alone or assumed to remain constant across uses. When models interact, their relationships can affect the behavior we are trying to evaluate.
 
-[0:43] One basic lesson from network research is that the components alone do not determine system behavior. The same kinds of components can produce very different collective behavior depending on how they are connected and what passes between them. Once machines interact with other machines, that becomes a credibility problem because evaluating the individual components may no longer be sufficient. The interaction itself can create properties that are not visible when those components are evaluated independently.
+[0:38] One basic lesson from network research is that the components alone do not determine system behavior. The same kinds of components can produce very different collective behavior depending on how they are connected and what passes between them. Once machines interact with other machines, that becomes a credibility problem because evaluating the individual components may no longer be sufficient. The interaction itself can create properties that are not visible when those components are evaluated independently.
 
-[1:13] So the research program I want to show you is organized around two linked questions: What does interaction change, and what evidence does that give us for deciding when reliance on the resulting system is warranted? I’ll first show you the experimental system I use to study those questions, and then a series of studies looking at how structure, communication, failure, model capability, and emergent organization change system behavior and the evidence available for evaluating it.
+[1:08] So the research program I want to show you is organized around two linked questions: What does interaction change, and what evidence does that give us for deciding when reliance on the resulting system is warranted? I’ll first show you the experimental system I use to study those questions, and then a series of studies looking at how structure, communication, failure, model capability, and emergent organization change system behavior and the evidence available for evaluating it.
 
 ## 02 · system · 0:38
 This is the experimental system I build with, and everything else I’m going to show you happens inside this picture. I’m not particularly wedded to the system as an artifact. I built it to answer research questions, and it is probably more representative of how I approach problems: I build the experimental machinery I need and then use it to interrogate the problem. There are three basic parts: what controls the experiment, what I can vary, and what comes out of the system and how I evaluate it.
 
-## 03 · control · 0:36
-The controller is the experimental apparatus, and the experiment itself is specified in code. I can configure conditions, launch models into defined roles, control communication, isolate information, record the complete interaction trace, and repeat conditions across trials. That gives me experimental control, reproducibility, and transparency.
+## 03 · control · 0:43
+The controller is the experimental apparatus, and the experiment itself is specified in code. I can configure conditions, assign models to defined roles, control communication, isolate information, record interaction traces, and repeat experimental configurations across trials. That makes the procedure inspectable and allows runs to be reconstructed from their records. Reproducing the configuration does not necessarily reproduce identical outputs from stochastic models.
 
-[0:21] The complete trace matters for credibility because I’m not limited to asking whether the final answer was correct. I can inspect how the system got there, where information entered, how it changed, and where dependencies or failures emerged.
+[0:28] The complete trace matters for credibility because I’m not limited to asking whether the final answer was correct. I can inspect how the system got there, where information entered, how it changed, and where dependencies or failures emerged.
 
 ## 04 · design · 0:40
 Within that apparatus I can vary the task, the evidence agents receive, model composition, network structure, communication rules, and perturbations. These six structures give me a representative communication vocabulary, so the same information can travel through very different paths before it is integrated.
@@ -40,7 +40,7 @@ Within that apparatus I can vary the task, the evidence agents receive, model co
 ## 05 · evaluation · 0:53
 At the system level I can evaluate performance, reliability, robustness, variability, drift, provenance, traceability, and failure behavior using several measurement approaches. None of those is credibility by itself. They are different forms of credibility evidence, and which ones matter depends on the reliance claim, the task, and the operating conditions.
 
-[0:23] The projects I’m about to show you are all active research. They are either under review, in revision, or approaching submission. Taken together, they are also indicative of how I think about programmatic research: build a common experimental infrastructure, then use it to ask a family of related questions whose results can accumulate. After the meeting I’ll send a link to my research site with this talk and a small portfolio of the papers behind it.
+[0:23] The research projects are at different stages. Some have manuscripts under review or revision, while others remain exploratory. They share an experimental infrastructure that allows related questions to be investigated with comparable procedures and measures. That is how I approach programmatic research: develop the apparatus, use it to answer a particular question, and retain what the findings and failures make possible for the next study. The research site brings together the papers and supporting materials.
 
 ## 06 · q-problem-solving · 0:09
 The first research question is how task and network structure affect collective problem solving.
@@ -66,8 +66,8 @@ That leads to a different question: what happens to information itself as it mov
 ## 11 · mutation · 0:17
 Here the important object is the message rather than the final answer. Every transmission or synthesis step creates another opportunity for transformation. Some information survives, some changes, some disappears, and new material can also appear downstream.
 
-## 12 · mutation-process · 0:42
-This creates an important distinction for credibility because preserving recognizable facts is not necessarily the same as preserving their evidentiary meaning. A conditional estimate can become an asserted fact, or an unresolved discrepancy can become a reconciled conclusion. The names and numbers may remain recognizable while what they are taken to support changes. Across the architectures we tested, we saw different profiles of drift, divergence, and unsupported content. So provenance is not only a question of identifying where information came from. It may also require understanding what happened to that information as it moved through the system.
+## 12 · mutation-process · 0:49
+Preserving recognizable facts is not necessarily the same as preserving their evidentiary meaning. A conditional estimate can become an asserted fact, or an unresolved discrepancy can become an apparently reconciled conclusion. The names and numbers may remain intact even though the relationship among them has changed. Across the implemented communication structures, we observed different profiles of drift, divergence, and unsupported content. But those comparisons also varied transformation depth and other structural features, and some conclusions depended on how mutation was coded. The credibility question is therefore about more than where information came from. We also need to know what happened to it along the way, including whether its conditions, scope, and evidentiary status were preserved.
 
 ## 13 · q-backtrace · 0:16
 So far I have assumed that I can observe the production process, but many settings present the inverse problem: we see the artifact at the end and not the process that generated it.
@@ -89,10 +89,10 @@ I can disrupt particular nodes or communication paths and ask whether the system
 ## 18 · q-models · 0:08
 Model capability is another part of the design space.
 
-## 19 · models · 0:37
-By holding tasks, structures, communication rules, and evaluation procedures relatively stable, I can ask how model capability interacts with task and structural position.
+## 19 · models · 0:48
+Holding tasks, communication structures, and evaluation procedures relatively stable lets me examine how model capability interacts with structural position.
 
-[0:12] One pattern I’m beginning to see is that capability and position may interact: a stronger model can matter more when it occupies an integration point than when it sits at the edge of the network. If that holds, component-level evaluation misses part of the system. Keeping the rest of the experimental procedure relatively stable also gives us comparability across model generations.
+[0:11] One hypothesis is that a stronger model might be especially valuable at an integration point, where several messages are combined. But the results do not support a general capability advantage in that position. In our information-mutation experiments, placing a higher-capability model at a hub or upper tier did not reliably reduce fabricated content. That suggests capability cannot be treated as a general repair for structural vulnerability. Its contribution depends on the task, outcome, and position being evaluated. The shared experimental apparatus also makes it possible to compare model generations without reconstructing the entire study.
 
 ## 20 · q-selforg · 0:13
 I can also stop specifying the network and let structure become an emergent outcome while the task, evidence, models, and communication constraints remain controlled.
@@ -103,11 +103,10 @@ The early runs suggest that the resulting networks are not arbitrary. Communicat
 ## 22 · selforg-emerge · 0:22
 That matters for credibility because the system may create its own dependencies, bottlenecks, and apparent agreement. The question then becomes not only what structure does to the system, but what structure the system creates for itself and what those endogenous dependencies do to reliability, robustness, and provenance.
 
-## 23 · close · 1:35
-The larger question is whether credibility evaluation can become more durable and cumulative as the underlying models continue to change. Models will keep changing, and systems built from them will change as well, so some evaluation criteria may be tightly coupled to particular model generations, capability levels, or operating conditions.
+## 23 · close · 1:06
+The larger question is whether evidence about interacting AI systems can remain informative as the underlying models change. Individual-model evaluation matters. But once models exchange information, we also have to examine whether claims preserve their conditions, whether apparently independent outputs share a source, and whether a failure is contained or propagated through the system.
 
-[0:23] A more durable approach to credibility may require evidence at the level of the interacting system, not only the individual model. That evidence might include how information moves through a structure, how dependence forms among components, how failures propagate or are contained, and whether outputs can be traced back to the processes that produced them. If credibility is an evidentiary process, then the empirical question is which of those system-level properties, if any, remain informative across changes in models, tasks, capability levels, and operating conditions.
+[0:25] These are properties we can investigate experimentally. We can control communication pathways, trace transformations, vary model placement, and introduce failures at defined positions. What remains uncertain is which findings travel across tasks, architectures, and model generations. Some relationships may prove stable enough to support common tests, evaluation criteria, or assurance procedures. Others may depend strongly on the models and operating conditions involved.
 
-[0:57] Some may prove sufficiently stable to support reproducible tests, common evaluation criteria, rubrics, benchmarks, or assurance procedures, while others may turn out to be highly contingent. Distinguishing between those possibilities is itself part of the research problem. It may also require research systems that preserve enough experimental control, measurement consistency, provenance, and traceability for evidence to accumulate across studies and model generations.
+[0:49] My objective is to establish those boundaries empirically. A useful credibility evaluation should tell us what evidence supports relying on a particular system, where that reliance could fail, and how far the evidence extends beyond the conditions in which it was obtained.
 
-[1:22] If sufficiently stable regularities exist, they may provide a basis for cumulative credibility evidence about when reliance is warranted, rather than requiring the evaluation problem to be reconstructed around each new model generation.
